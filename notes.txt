@@ -1,0 +1,6 @@
+ng g component pages/home
+ng g component pages/listar
+ng g component components/header
+
+
+criam pastas dentro de src/app, com html, css, teste e ts
