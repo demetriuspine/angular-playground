@@ -6,5 +6,5 @@ criam pastas dentro de src/app, com html, css, teste e ts
 instala angular material
   ng add @angular/material
 
-gera um formulário
+gera um formulário (https://material.angular.io/guide/schematics)
   ng generate @angular/material:address-form pages/cadastro
