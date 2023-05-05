@@ -16,6 +16,8 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "esModuleInterop": true, //permite o uso de module.exports e require
+    "resolveJsonModule": true, //permite importar um arquivo json
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
