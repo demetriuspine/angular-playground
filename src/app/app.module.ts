@@ -25,7 +25,7 @@ import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
-     AppComponent,
+    AppComponent,
     HomeComponent,
     ListarComponent,
     HeaderComponent,
