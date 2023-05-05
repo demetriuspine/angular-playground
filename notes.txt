@@ -1,6 +1,10 @@
-ng g component pages/home
-ng g component pages/listar
-ng g component components/header
-
-
 criam pastas dentro de src/app, com html, css, teste e ts
+  ng g component pages/home
+  ng g component pages/listar
+  ng g component components/header
+
+instala angular material
+  ng add @angular/material
+
+gera um formulário
+  ng generate @angular/material:address-form pages/cadastro
