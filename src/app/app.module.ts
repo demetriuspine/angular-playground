@@ -24,6 +24,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { ManipulandoJsonComponent } from './pages/manipulando-json/manipulando-json.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UsersComponent } from './pages/users/users.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
     CadastroComponent,
     LoginComponent,
     MainComponent,
-    ManipulandoJsonComponent
+    ManipulandoJsonComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
