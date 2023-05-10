@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import studentsData from '../../students.json';
-
-interface Students {
-  id: Number,
-  name: String,
-  email: String,
-  gender: String
-}
+import { IStudent } from 'src/app/models/student.interface';
 
 @Component({
   selector: 'app-manipulando-json',
@@ -14,5 +8,9 @@ interface Students {
   styleUrls: ['./manipulando-json.component.css']
 })
 export class ManipulandoJsonComponent {
-  students: Students[] = studentsData;
+  students: IStudent[] = studentsData;
+
+  ngOnInit(): void {
+    console.log(this.students);
+  }
 }
