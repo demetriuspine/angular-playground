@@ -8,7 +8,11 @@ import { IStudent } from 'src/app/models/student.interface';
   styleUrls: ['./manipulando-json.component.css']
 })
 export class ManipulandoJsonComponent {
-  students: IStudent[] = studentsData;
+  private students: IStudent[] = studentsData;
+
+  public getStudents(): IStudent[] {
+    return this.students;
+  }
 
   ngOnInit(): void {
     console.log(this.students);

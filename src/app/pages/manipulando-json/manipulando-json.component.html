@@ -10,7 +10,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let student of students">
+      <tr *ngFor="let student of getStudents()">
         <td>{{student.id}}</td>
         <td>{{student.name}}</td>
         <td>{{student.email}}</td>
