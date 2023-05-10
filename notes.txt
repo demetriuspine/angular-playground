@@ -8,3 +8,9 @@ instala angular material
 
 gera um formulário (https://material.angular.io/guide/schematics)
   ng generate @angular/material:address-form pages/cadastro
+
+cria uma api com base no json (entrar no mesmo diretório do arquivo)
+  json-server --watch db.json
+
+gera pasta com arquivo de service
+  ng g service services/user
