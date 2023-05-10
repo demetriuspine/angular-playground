@@ -9,8 +9,8 @@ import { ManipulandoJsonComponent } from './pages/manipulando-json/manipulando-j
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'listar', component: ListarComponent },
-  { path: 'cadastro', component: CadastroComponent },
+  { path: 'list', component: ListarComponent },
+  { path: 'register', component: CadastroComponent },
   { path: 'login', component: LoginComponent },
   { path: 'students', component: ManipulandoJsonComponent },
 ];
