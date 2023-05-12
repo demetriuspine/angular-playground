@@ -26,6 +26,8 @@ import { ManipulandoJsonComponent } from './pages/manipulando-json/manipulando-j
 import { HttpClientModule } from '@angular/common/http';
 import { UsersComponent } from './pages/users/users.component';
 import { SubRouteComponent } from './pages/sub-route/sub-route.component';
+import { Page1Component } from './pages/sub-route/page1/page1.component';
+import { Page2Component } from './pages/sub-route/page2/page2.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { SubRouteComponent } from './pages/sub-route/sub-route.component';
     MainComponent,
     ManipulandoJsonComponent,
     UsersComponent,
-    SubRouteComponent
+    SubRouteComponent,
+    Page1Component,
+    Page2Component
   ],
   imports: [
     BrowserModule,
