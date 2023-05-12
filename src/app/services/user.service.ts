@@ -19,8 +19,18 @@ export class UserService {
     return users;
   }
 
-  postUser(user: IUser): Observable<IUser>{
+  postUser(user: IUser): Observable<IUser> {
     const newUser = this.http.post<IUser>(`${this.BASE_URL}/users`, user, httpOptions);
     return newUser;
+  }
+
+  updateUser(user: IUser): Observable<IUser> {
+    const updatedUser = this.http.put<IUser>(`${this.BASE_URL}/users/${user.id}`, user, httpOptions);
+    return updatedUser;
+  }
+
+  deleteUser(user: IUser): Observable<IUser> {
+    const deletedUser = this.http.delete<IUser>(`${this.BASE_URL}/users/${user.id}`, httpOptions);
+    return deletedUser;
   }
 }
