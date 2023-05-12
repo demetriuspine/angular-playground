@@ -25,6 +25,7 @@ import { MatListModule } from '@angular/material/list';
 import { ManipulandoJsonComponent } from './pages/manipulando-json/manipulando-json.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersComponent } from './pages/users/users.component';
+import { SubRouteComponent } from './pages/sub-route/sub-route.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { UsersComponent } from './pages/users/users.component';
     LoginComponent,
     MainComponent,
     ManipulandoJsonComponent,
-    UsersComponent
+    UsersComponent,
+    SubRouteComponent
   ],
   imports: [
     BrowserModule,
