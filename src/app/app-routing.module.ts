@@ -6,6 +6,7 @@ import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ManipulandoJsonComponent } from './pages/manipulando-json/manipulando-json.component';
 import { UsersComponent } from './pages/users/users.component';
+import { SubRouteComponent } from './pages/sub-route/sub-route.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -15,6 +16,12 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'students', component: ManipulandoJsonComponent },
   { path: 'users', component: UsersComponent },
+  { path: 'subroute', component: SubRouteComponent,
+    children:[
+      { path: 'page1', component: ManipulandoJsonComponent },
+      { path: 'page2', component: ManipulandoJsonComponent }
+    ]
+  },
 ];
 
 @NgModule({
