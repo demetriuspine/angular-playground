@@ -7,6 +7,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { ManipulandoJsonComponent } from './pages/manipulando-json/manipulando-json.component';
 import { UsersComponent } from './pages/users/users.component';
 import { SubRouteComponent } from './pages/sub-route/sub-route.component';
+import { Page1Component } from './pages/sub-route/page1/page1.component';
+import { Page2Component } from './pages/sub-route/page2/page2.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -16,10 +18,11 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'students', component: ManipulandoJsonComponent },
   { path: 'users', component: UsersComponent },
-  { path: 'subroute', component: SubRouteComponent,
-    children:[
-      { path: 'page1', component: ManipulandoJsonComponent },
-      { path: 'page2', component: ManipulandoJsonComponent }
+  {
+    path: 'subroute', component: SubRouteComponent,
+    children: [
+      { path: 'page1', component: Page1Component },
+      { path: 'page2', component: Page2Component }
     ]
   },
 ];
