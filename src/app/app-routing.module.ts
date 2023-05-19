@@ -11,6 +11,7 @@ import { Page1Component } from './pages/sub-route/page1/page1.component';
 import { Page2Component } from './pages/sub-route/page2/page2.component';
 import { PrivateComponent } from './pages/private/private.component';
 import { AuthorizedGuard } from './guard/authorized.guard';
+import { DetailComponent } from './pages/detail/detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -31,6 +32,7 @@ const routes: Routes = [
     path: 'private', component: PrivateComponent,
     canActivate: [AuthorizedGuard]
   },
+  { path: 'detail/:id', component: DetailComponent },
 ];
 
 @NgModule({

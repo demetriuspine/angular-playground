@@ -29,6 +29,7 @@ import { SubRouteComponent } from './pages/sub-route/sub-route.component';
 import { Page1Component } from './pages/sub-route/page1/page1.component';
 import { Page2Component } from './pages/sub-route/page2/page2.component';
 import { PrivateComponent } from './pages/private/private.component';
+import { DetailComponent } from './pages/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { PrivateComponent } from './pages/private/private.component';
     SubRouteComponent,
     Page1Component,
     Page2Component,
-    PrivateComponent
+    PrivateComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
