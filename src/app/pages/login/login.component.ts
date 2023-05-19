@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { AuthorizationService } from 'src/app/services/authorization.service';
 
 @Component({
   selector: 'app-login',
@@ -85,9 +86,17 @@ export class LoginComponent {
     {name: 'Wyoming', abbreviation: 'WY'}
   ];
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder,
+    private authorizationService: AuthorizationService) {}
 
+  loginClick(){
+    if(this.authorizationService.getLoginStatus())
+      this.authorizationService.logout();
+    else
+      this.authorizationService.authorize();
+  }
   onSubmit(): void {
+    this.loginClick();
     alert('Thanks!');
   }
 }
