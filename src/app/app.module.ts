@@ -28,6 +28,7 @@ import { UsersComponent } from './pages/users/users.component';
 import { SubRouteComponent } from './pages/sub-route/sub-route.component';
 import { Page1Component } from './pages/sub-route/page1/page1.component';
 import { Page2Component } from './pages/sub-route/page2/page2.component';
+import { PrivateComponent } from './pages/private/private.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { Page2Component } from './pages/sub-route/page2/page2.component';
     UsersComponent,
     SubRouteComponent,
     Page1Component,
-    Page2Component
+    Page2Component,
+    PrivateComponent
   ],
   imports: [
     BrowserModule,

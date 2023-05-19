@@ -9,6 +9,7 @@ import { UsersComponent } from './pages/users/users.component';
 import { SubRouteComponent } from './pages/sub-route/sub-route.component';
 import { Page1Component } from './pages/sub-route/page1/page1.component';
 import { Page2Component } from './pages/sub-route/page2/page2.component';
+import { PrivateComponent } from './pages/private/private.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -25,6 +26,7 @@ const routes: Routes = [
       { path: 'page2', component: Page2Component }
     ]
   },
+  { path: 'private', component: PrivateComponent },
 ];
 
 @NgModule({
