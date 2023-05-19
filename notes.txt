@@ -14,3 +14,6 @@ cria uma api com base no json (entrar no mesmo diretório do arquivo)
 
 gera pasta com arquivo de service
   ng g service services/user
+
+gera pasta guard
+  ng g guard guard/authorized 
