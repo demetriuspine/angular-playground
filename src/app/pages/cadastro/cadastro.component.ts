@@ -7,11 +7,13 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./cadastro.component.css']
 })
 export class CadastroComponent {
-  addressForm = this.fb.group({
+  registerForm = this.fb.group({
     id: '',
     company: null,
     firstName: [null, Validators.required],
-    email: [null, Validators.required],
+    email: ['', Validators.compose([
+      Validators.required, Validators.minLength(5), Validators.maxLength(50), Validators.email],)
+    ],
     phone: [null, Validators.required],
     city: [null, Validators.required],
     companyName: [null, Validators.required],
@@ -21,7 +23,16 @@ export class CadastroComponent {
 
   hasUnitNumber = false;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder) { }
+
+  email = this.registerForm.controls['email'];
+
+  getErrorEmail() {
+    if (this.email.hasError('required')) {
+      return 'Email is required'
+    }
+    return this.email.hasError('email') ? 'Email must be valid' : '';
+  }
 
   onSubmit(): void {
     alert('Thanks!');

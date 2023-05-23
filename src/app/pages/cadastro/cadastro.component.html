@@ -1,4 +1,4 @@
-<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+<form [formGroup]="registerForm" novalidate (ngSubmit)="onSubmit()">
   <mat-card class="shipping-card formRegister">
     <mat-card-header>
       <mat-card-title>Register</mat-card-title>
@@ -9,7 +9,7 @@
         <div class="col">
           <mat-form-field class="full-width">
             <input matInput placeholder="Full Name" formControlName="firstName">
-            <mat-error *ngIf="addressForm.controls['firstName'].hasError('required')">
+            <mat-error *ngIf="registerForm.controls['firstName'].hasError('required')">
               Name is <strong>required</strong>
             </mat-error>
           </mat-form-field>
@@ -17,8 +17,8 @@
         <div class="col">
           <mat-form-field class="full-width">
             <input matInput placeholder="Email" formControlName="email">
-            <mat-error *ngIf="addressForm.controls['email'].hasError('required')">
-              Email is <strong>required</strong>
+            <mat-error *ngIf="email.invalid">
+              {{getErrorEmail()}}
             </mat-error>
           </mat-form-field>
         </div>
@@ -27,7 +27,7 @@
         <div class="col">
           <mat-form-field class="full-width">
             <textarea matInput placeholder="Phone" formControlName="phone"></textarea>
-            <mat-error *ngIf="addressForm.controls['phone'].hasError('required')">
+            <mat-error *ngIf="registerForm.controls['phone'].hasError('required')">
               Phone is <strong>required</strong>
             </mat-error>
           </mat-form-field>
@@ -36,7 +36,7 @@
       <div class="col">
         <mat-form-field class="full-width">
           <input matInput placeholder="City" formControlName="city">
-          <mat-error *ngIf="addressForm.controls['city'].hasError('required')">
+          <mat-error *ngIf="registerForm.controls['city'].hasError('required')">
             City is <strong>required</strong>
           </mat-error>
         </mat-form-field>
@@ -44,7 +44,7 @@
       <div class="col">
         <mat-form-field class="full-width">
           <input matInput placeholder="Company name" formControlName="companyName">
-          <mat-error *ngIf="addressForm.controls['companyName'].hasError('required')">
+          <mat-error *ngIf="registerForm.controls['companyName'].hasError('required')">
             Company name is <strong>required</strong>
           </mat-error>
         </mat-form-field>
@@ -52,7 +52,7 @@
       <div class="col">
         <mat-form-field class="full-width">
           <input matInput placeholder="Username" formControlName="username">
-          <mat-error *ngIf="addressForm.controls['username'].hasError('required')">
+          <mat-error *ngIf="registerForm.controls['username'].hasError('required')">
             Username is <strong>required</strong>
           </mat-error>
         </mat-form-field>
@@ -60,14 +60,14 @@
       <div class="col">
         <mat-form-field class="full-width">
           <input matInput placeholder="Password" type="password" formControlName="password">
-          <mat-error *ngIf="addressForm.controls['password'].hasError('required')">
+          <mat-error *ngIf="registerForm.controls['password'].hasError('required')">
             Password is <strong>required</strong>
           </mat-error>
         </mat-form-field>
       </div>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button [disabled]="!addressForm.valid" color="primary" type="submit">Register</button>
+      <button mat-raised-button [disabled]="!registerForm.valid" color="primary" type="submit">Register</button>
     </mat-card-actions>
   </mat-card>
 </form>
