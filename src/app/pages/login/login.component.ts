@@ -8,20 +8,27 @@ import { AuthorizationService } from 'src/app/services/authorization.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  addressForm = this.fb.group({
+  loginForm = this.fb.group({
     email: ['', Validators.compose([
-      Validators.required, Validators.minLength(5), Validators.maxLength(50)])
+      Validators.required, Validators.minLength(5), Validators.maxLength(50), Validators.email],)
     ],
     password: ['', Validators.required]
   });
 
-
-
   constructor(private fb: FormBuilder,
-    private authorizationService: AuthorizationService) {}
+    private authorizationService: AuthorizationService) { }
 
-  loginClick(){
-    if(this.authorizationService.getLoginStatus())
+  email = this.loginForm.controls['email'];
+
+  getErrorEmail(){
+    if(this.email.hasError('required')){
+      return 'Email is required'
+    }
+    return this.email.hasError('email') ? 'Email must b valid' : '';
+  }
+
+  loginClick() {
+    if (this.authorizationService.getLoginStatus())
       this.authorizationService.logout();
     else
       this.authorizationService.authorize();
