@@ -20,11 +20,11 @@ export class LoginComponent {
 
   email = this.loginForm.controls['email'];
 
-  getErrorEmail(){
-    if(this.email.hasError('required')){
+  getErrorEmail() {
+    if (this.email.hasError('required')) {
       return 'Email is required'
     }
-    return this.email.hasError('email') ? 'Email must b valid' : '';
+    return this.email.hasError('email') ? 'Email must be valid' : '';
   }
 
   loginClick() {
