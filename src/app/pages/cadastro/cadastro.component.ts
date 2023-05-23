@@ -13,6 +13,9 @@ export class CadastroComponent {
     firstName: [null, Validators.required],
     email: [null, Validators.required],
     phone: [null, Validators.required],
+    city: [null, Validators.required],
+    companyName: [null, Validators.required],
+    username: [null, Validators.required],
     password: [null, Validators.required]
   });
 
