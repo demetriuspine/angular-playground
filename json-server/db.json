@@ -99,6 +99,16 @@
       "city": "Lebsackbury",
       "phone": "024-648-3804",
       "companyName": "Hoeger LLC"
+    },
+    {
+      "name": "Lucas Pine",
+      "username": "killerdeza",
+      "email": "lucas@pine.com",
+      "password": "killerdeza",
+      "city": "São Paulo",
+      "phone": "+55 11 984080556",
+      "companyName": "SOL",
+      "id": 11
     }
   ]
 }
